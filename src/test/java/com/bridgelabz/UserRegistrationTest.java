@@ -14,13 +14,13 @@ public class UserRegistrationTest {
         Assert.assertTrue(registrationOfUser.validate_First_Name("Mangesh"));
         Assert.assertTrue(registrationOfUser.validate_First_Name("Priya"));
         Assert.assertTrue(registrationOfUser.validate_First_Name("Ravi"));
-    }@Test
+    }
+    @Test
     public void when_Given_First_Name_Should_Return_False(){
         Assert.assertFalse(registrationOfUser.validate_First_Name("M312angesh"));
-        Assert.assertTrue(registrationOfUser.validate_First_Name("123Mangesh"));
-        Assert.assertTrue(registrationOfUser.validate_First_Name("MMangesh"));
-        Assert.assertTrue(registrationOfUser.validate_First_Name("Om"));
+        Assert.assertFalse(registrationOfUser.validate_First_Name("123Mangesh"));
+        Assert.assertFalse(registrationOfUser.validate_First_Name("MMangesh"));
+        Assert.assertFalse(registrationOfUser.validate_First_Name("Om"));
     }
-
 
 }
