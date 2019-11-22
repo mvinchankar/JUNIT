@@ -27,5 +27,11 @@ public class UserRegistrationTest {
         Assert.assertTrue(registrationOfUser.validate_Last_Name("Pau"));
         Assert.assertTrue(registrationOfUser.validate_Last_Name("Rao"));
     }
-
+    @Test
+    public void when_Given_Last_Name_Should_Return_False(){
+        Assert.assertFalse(registrationOfUser.validate_Last_Name("h"));
+        Assert.assertFalse(registrationOfUser.validate_Last_Name("1233223424"));
+        Assert.assertFalse(registrationOfUser.validate_Last_Name("MasdaRao"));
+        Assert.assertFalse(registrationOfUser.validate_Last_Name("asdad213123asdasd"));
+    }
 }
