@@ -33,4 +33,12 @@ public class UserRegistrationTest {
         Assert.assertFalse(registrationOfUser.validate_Last_Name("asdad213123asdasd"));
     }
 
+    @Test
+    public void when_Given_Mobile_Number_Should_Return_True() {
+        Assert.assertTrue(registrationOfUser.validate_Mobile_Number("91 9552967330"));
+    }
+    @Test
+    public void when_Given_Mobile_Number_Should_Return_False() {
+        Assert.assertFalse(registrationOfUser.validate_Mobile_Number("552967330"));
+    }
 }
