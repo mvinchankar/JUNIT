@@ -13,7 +13,7 @@ final static Pattern emailPattern=Pattern.compile("^[a-zA-Z0-9]([._+]{0,1}[a-zA-
         return false;
     }
     public static boolean validate_Last_Name(String lastName) {
-        Matcher m = emailPattern.matcher(lastName);
+        Matcher m = namePattern.matcher(lastName);
         if (m.matches())
             return true;
         return false;

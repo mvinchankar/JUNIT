@@ -2,8 +2,6 @@ package com.bridgelabz;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 public class UserRegistrationTest {
 
@@ -34,10 +32,5 @@ public class UserRegistrationTest {
         Assert.assertFalse(registrationOfUser.validate_Last_Name("MasdaRao"));
         Assert.assertFalse(registrationOfUser.validate_Last_Name("asdad213123asdasd"));
     }
-    @Test
-    public void when_Given_Email_ID_Should_Return_True() {
-        Assert.assertTrue(registrationOfUser.validate_Email_Id("abc@bridgelabz.com"));
-        Assert.assertTrue(registrationOfUser.validate_Email_Id("abc.xyz@bridgelabz.com"));
-        Assert.assertTrue(registrationOfUser.validate_Email_Id("abc@1.com"));
-    }
+
 }
